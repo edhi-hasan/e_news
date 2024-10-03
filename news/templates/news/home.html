@@ -1,0 +1,126 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="news_section">
+    <h2 class="section">সর্বশেষ</h2>
+    <div class="container">
+        <!-- Main Content -->
+        {% for lnews in l_news %} 
+            <div class="main-content">
+                <img src="{{lnews.image.url}}" alt="Latest News Image">
+                <h1><a href="{% url 'detial' %}">{{lnews.title}}</a></h1>
+                <h6>Published: {{lnews.date}}</h6>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="news_section">
+    <h2 class="section">বাংলাদেশ</h2>
+    <div class="container">
+        <!-- Main Content -->
+        {% for bnews in bnews %} 
+            <div class="main-content">
+                <img src="{{bnews.image.url}}" alt="bangladesh News Image">
+                <h1><a href="#">{{bnews.title}}</a></h1>
+                <h6>Published: {{bnews.date}}</h6>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="news_section">
+    <h2 class="section">রাজনীতি</h2>
+    <div class="container">
+        <!-- Main Content -->
+        {% for pnews in pl_news %} 
+            <div class="main-content">
+                <img src="{{pnews.image.url}}" alt="Politics News Image">
+                <h1><a href="#">{{pnews.title}}</a></h1>
+                <h6>Published: {{pnews.date}}</h6>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="news_section">
+    <h2 class="section">বিশ্ব</h2>
+    <div class="container">
+        <!-- Main Content -->
+        {% for pnews in w_news %} 
+            <div class="main-content">
+                <img src="{{pnews.image.url}}" alt="Politics News Image">
+                <h1><a href="#">{{pnews.title}}</a></h1>
+                <h6>Published: {{pnews.date}}</h6>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="news_section">
+    <h2 class="section">খেলা</h2>
+    <div class="container">
+        <!-- Main Content -->
+        {% for pnews in sp_news %} 
+            <div class="main-content">
+                <img src="{{pnews.image.url}}" alt="Politics News Image">
+                <h1><a href="#">{{pnews.title}}</a></h1>
+                <h6>Published: {{pnews.date}}</h6>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="news_section">
+    <h2 class="section">বাণিজ্য</h2>
+    <div class="container">
+        <!-- Main Content -->
+        {% for pnews in trd_news %} 
+            <div class="main-content">
+                <img src="{{pnews.image.url}}" alt="Politics News Image">
+                <h1><a href="#">{{pnews.title}}</a></h1>
+                <h6>Published: {{pnews.date}}</h6>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="news_section">
+    <h2 class="section">প্রযুক্তি</h2>
+    <div class="container">
+        <!-- Main Content -->
+        {% for pnews in tech_news %} 
+            <div class="main-content">
+                <img src="{{pnews.image.url}}" alt="Politics News Image">
+                <h1><a href="#">{{pnews.title}}</a></h1>
+                <h6>Published: {{pnews.date}}</h6>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="news_section">
+    <h2 class="section">বিনোদন</h2>
+    <div class="container">
+        <!-- Main Content -->
+        {% for pnews in en_news %} 
+            <div class="main-content">
+                <img src="{{pnews.image.url}}" alt="Politics News Image">
+                <h1><a href="#">{{pnews.title}}</a></h1>
+                <h6>Published: {{pnews.date}}</h6>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% comment %} {% include 'news/content/latest.html' %}
+{% include 'news/content/politics.html' %}
+{% include 'news/content/bangladesh.html' %}
+{% include 'news/content/world.html' %}
+{% include 'news/content/sports.html' %}
+{% include 'news/content/trade.html' %}
+{% include 'news/content/technology.html' %}
+{% include 'news/content/entertainment.html' %} {% endcomment %}
+{% endblock content %}

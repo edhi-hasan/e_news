@@ -1,0 +1,297 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 0px;
+}
+
+header {
+    background-color: #f7f4f4;
+    color: rgb(17, 16, 16);
+    text-align: center;
+    position: fixed;
+    align-items: center;
+    padding: 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for better visibility */
+}
+
+.header-item{
+    margin-right: 20px; 
+    margin-left: 20px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-item p{
+    text-align: center;
+    font-size: 15px;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7efef;
+    align-items: center;
+    padding: 15px;
+    margin-top: 70px;
+    z-index: 999;
+}
+
+nav a {
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+    margin: 5px;
+}
+nav a:hover{
+    color: rgb(16, 160, 81);
+}
+
+
+nav .signUp {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.nav-links a,
+.signUp a {
+    text-decoration: none;
+    color: rgb(14, 13, 13);
+    margin: 10px;
+    padding-bottom: 5px; /* Adds space for the underline */
+}
+
+.section{
+    margin: 10px 45px 0px 45px;
+    padding: 10px;
+    background-color: #f1eeee;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+    gap: 15px; /* Space between grid items */
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.main-content {
+    box-sizing: border-box;
+    background-color: #f7eded;
+    border-radius: 5px;
+}
+
+.main-content h1 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    height: auto;
+    max-width: 100%;
+}
+
+.main-content h1 a {
+    color: inherit; /* Makes the link color inherit from the parent element */
+    text-decoration: none; /* Removes the underline */
+    font-weight: bold;
+}
+
+.main-content h1 a:hover{
+    color: rgb(16, 160, 81);
+}
+
+.main-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.main-content h6{
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* sign_UP form */
+.signup_form{
+    margin: 30px 300px 100px 300px;
+}
+.signup_form h1{
+    text-align: center;
+    padding: 6px;
+    background-color: #f1e6e6;
+    color: #6b6767;
+    border-radius: 5px;
+}
+
+
+
+.newsform{
+    margin-top: 20px;
+    margin-left: 170px;
+    margin-right: 50px;
+}
+.newsform h3{
+    padding: 10px;
+    border-radius: 5px;
+}
+.form-group{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.form-control{
+    background-color: #f7f1f1;
+}
+.btn{
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.dashboard{
+    background-color: rgb(228, 212, 212);
+    margin: 30px 100px 10px 100px;
+    padding: 10px;
+}
+.dashboard h1{
+    background-color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+.new_sec ul li a{
+    text-decoration: none;
+    list-style-type: stylet;
+}
+
+/*<---------------------details_news--------------------->*/
+.detalsnews {
+    width: 60%;  /* Make the div 80% of the total page width */
+    margin: 0 auto;  /* Center the div horizontally */
+}
+
+.details {
+    margin-bottom: 20px;  /* Add some bottom margin to the whole block */
+}
+
+.details h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;  /* Add margin to the bottom of the headline */
+}
+
+.details img {
+    width: 80%;  /* Make the image take 100% of the parent div's width */
+    height: auto;/* Maintain the aspect ratio of the image */
+    margin-left: 50px;
+}
+
+.details h6 {
+    font-size: 0.8em;  /* Make the font size smaller for the published time */
+    margin-top: 10px;  /* Add a little space above the published time */
+    margin-bottom: 20px;
+}
+
+.details span {
+    width: 100%;  /* Make the paragraph take up the full width of the div */
+    line-height: 1.6;  /* Improve readability by increasing the line height */
+    text-align: left;  /* Justify text for better readability */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns for medium screens */
+    }
+
+    .header-item p{
+        font-size: 13px;
+    }
+
+    .signup_form{
+        margin: 30px 150px 100px 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr); /* Stack the items in one column */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .signup_form {
+        margin: 20px;
+    }
+
+    .header-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    .main-content h1 {
+        font-size: 13px;
+    }
+
+    .section {
+        font-size: 18px;
+    }
+
+    .signup_form {
+        margin: 10px;
+    }
+
+    footer {
+        padding: 5px;
+    }
+}
